@@ -1,22 +1,30 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.scss";
+import Header from "./components/Header";
+import { Open_Sans, Roboto } from "next/font/google";
+import { Suspense } from "react";
+import Loading from "./loading";
+import Footer from "./components/Footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Github Profile",
   description: "DEV2DEV",
 };
+
+const roboto = Roboto({
+  subsets: ["cyrillic"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  style: ["italic", "normal"],
+  variable: "--font-roboto",
+})
+
+const openSans = Open_Sans({
+  subsets: ["cyrillic"],
+  weight: ["300", "400", "500", "700"],
+  style: ["italic", "normal"],
+  variable: "--font-open-sans",
+})
 
 export default function RootLayout({
   children,
@@ -25,8 +33,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body className={`${openSans.variable} ${roboto.variable}`}>
+        <Header />
+        <Suspense fallback={<Loading />}>{children}</Suspense>
+        <Footer />
       </body>
     </html>
   );

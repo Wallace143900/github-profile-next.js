@@ -1,0 +1,173 @@
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+
+    .mainSearch{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 17px;
+        padding: 48px 0;
+        border-bottom: 1px solid #BBB4B4;
+
+        input {
+            width: 742px;
+
+            @media (max-width: 1024px) {
+                width: 600px;
+              }
+        
+              @media (max-width: 768px) {
+                width: 500px;
+              }
+        
+              @media (max-width: 425px) {
+                width: 260px;
+                height: 45px;
+              }
+        
+              @media (max-width: 375px) {
+                width: 220px;
+                height: 43px;
+              }
+        
+              @media (max-width: 320px) {
+                width: 180px;
+                height: 40px;
+              }
+        }
+        
+        button {
+            width: 204.874px;
+
+            @media (max-width: 1024px) {
+                width: 160px;
+              }
+        
+              @media (max-width: 768px) {
+                width: 140px;
+              }
+        
+              @media (max-width: 425px) {
+                width: 120px;
+                height: 45px;
+              }
+        
+              @media (max-width: 375px) {
+                width: 100px;
+                height: 43px;
+              }
+        
+              @media (max-width: 320px) {
+                width: 90px;
+                height: 40px;
+              }
+        }
+    }
+    &--body {
+
+        @media (max-width: 1024px) {
+            padding: 0 24px;
+          }
+    
+          @media (max-width: 768px) {
+            flex-direction: column;
+            padding: 0 12px;
+            gap: 16px;
+          }
+    
+          @media (max-width: 425px) {
+            padding: 0 8px;
+          }
+    
+          @media (max-width: 375px) {
+            padding: 0 4px;
+          }
+    
+          @media (max-width: 320px) {
+            padding: 0 2px;
+          }
+        
+        > div {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            padding: 0 48px;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+              }
+  
+            img{
+                margin-top: calc(32px - 14px);
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                  }
+            }
+  
+            > div {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                margin-top: 14px;
+  
+                > a {
+                    align-self: flex-end;
+                    width: 223px;
+
+                    @media (max-width: 1024px) {
+                        width: 180px;
+                      }
+            
+                      @media (max-width: 768px) {
+                        width: 150px;
+                      }
+            
+                      @media (max-width: 425px) {
+                        width: 120px;
+                      }
+            
+                      @media (max-width: 375px) {
+                        width: 100px;
+                      }
+            
+                      @media (max-width: 320px) {
+                        width: 80px;
+                      }
+                }
+            }
+        }
+    }
+}
+  
+.container-projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 1fr);
+      }
+    
+      @media (max-width: 425px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+      }
+    
+      @media (max-width: 375px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+      }
+    
+      @media (max-width: 320px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+      }
+}
